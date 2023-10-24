@@ -5,8 +5,17 @@ project(${PROJECT_NAME})
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(${PROJECT_NAME}
-        main.cpp
+        src/main.cpp
+        src/state.h
+        src/game.h
+        src/game.cpp
+        src/types.h
+        src/size_utils.h
+        src/size_utils.cpp
 )
 
 add_subdirectory(external/sime)
 target_link_libraries(${PROJECT_NAME} PUBLIC SIME)
+
+add_subdirectory(external/glm)
+target_link_libraries(${PROJECT_NAME} PUBLIC glm)
