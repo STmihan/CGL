@@ -73,11 +73,11 @@ public:
             }
             ImGui::Text("Cell Count: %d", state.width * state.height);
             ImGui::Text("FPS: %f", io.Framerate);
-            auto size = ImGui::GetWindowSize();
-            ImGui::Text("Window Size: %f, %f", size.x, size.y);
-            state.canvasOffset = {std::floor(size.x), 0};
             const ivec2 &cell = CGL::toCellCoordinates(&state, {state.mouseX, state.mouseY});
             ImGui::Text("Current Cell: %d, %d", cell.x, cell.y);
+
+            auto size = ImGui::GetWindowSize();
+            state.canvasOffset = {std::floor(size.x), 0};
         }
         ImGui::End();
     }
