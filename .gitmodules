@@ -1,6 +1,3 @@
 [submodule "external/sime"]
 	path = external/sime
 	url = https://github.com/STmihan/SIME.git
-[submodule "external/glm"]
-	path = external/glm
-	url = https://github.com/g-truc/glm.git

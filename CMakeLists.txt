@@ -9,13 +9,9 @@ add_executable(${PROJECT_NAME}
         src/state.h
         src/game.h
         src/game.cpp
-        src/types.h
         src/size_utils.h
         src/size_utils.cpp
 )
 
 add_subdirectory(external/sime)
 target_link_libraries(${PROJECT_NAME} PUBLIC SIME)
-
-add_subdirectory(external/glm)
-target_link_libraries(${PROJECT_NAME} PUBLIC glm)
